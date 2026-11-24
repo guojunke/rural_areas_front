@@ -1,0 +1,62 @@
+/* 全局样式：只做布局骨架所需的最低限度样式，业务页面自带样式 */
+
+:root {
+  --app-sidebar-width: 220px;
+  --app-sidebar-width-collapsed: 64px;
+  --app-navbar-height: 56px;
+  --app-content-bg: #f2f3f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', Arial, sans-serif;
+  font-size: 14px;
+  color: #303133;
+  background: var(--app-content-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--el-color-primary);
+  text-decoration: none;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9cdd4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 业务页面统一容器：模块页面最外层使用，保证内边距与卡片底色一致 */
+.app-container {
+  padding: 16px;
+}
+
+/* 单行省略，列表单元格常用 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
